@@ -81,7 +81,7 @@ body {
   align-items: center;
   border-bottom: 1px solid;
   border-image: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%) 1;
-
+  z-index: 3;
 
   .DaoLabslogo {
     display: flex !important;
@@ -124,13 +124,12 @@ body {
     }
 
     .downmenu {
-      border-radius: 0px, 0px, 12px, 12px;
+      border-radius: 0px 0px 12px 12px;
     }
 
     .downmenu-content {
       transition-duration: 300ms;
       padding-top: 15px;
-      /* border: 1px solid rgb(40, 39, 39); */
       padding-bottom: 18px;
       text-align: center;
       display: none;
@@ -163,7 +162,6 @@ body {
     }
 
     .last-content {
-      /* border: 1px solid rgb(40, 39, 39); */
       padding-top: 15px;
       padding-bottom: 18px;
       text-align: center;
@@ -173,7 +171,8 @@ body {
       min-width: 212px;
       border-radius: 12px;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
+      z-index: 5 !important;
+
     }
 
     .last-content a {
@@ -362,7 +361,7 @@ body {
 @media screen and (max-width:854px) {
   .header {
     padding-left: 0;
-    padding-right: 15px;
+    padding-right: 0;
     justify-content: center;
     background-color: #1A1B23;
 
@@ -421,6 +420,7 @@ body {
           width: 100%;
           justify-content: center;
           gap: 80rem;
+          margin-right: 22rem;
         }
 
         h5 {
