@@ -261,9 +261,8 @@
       }
 
       .glow {
-        width: 100%;
-        margin-top: -100px;
-        margin-bottom: -101px;
+        margin-top: -116px;
+        margin-bottom: -163px;
         visibility: visible !important;
         display: block;
         flex-shrink: 0;
@@ -444,6 +443,7 @@
 
 @media screen and (max-width:430px) {
   .section2 {
+    width: 100%;
     padding-bottom: 51px;
     background: #0F0F0F;
 
@@ -729,7 +729,7 @@
     background: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%);
     z-index: -1;
     filter: blur(0);
-    border-radius: 24px;
+    border-radius: 10px;
     transition: all;
     transition-duration: 200ms;
   }

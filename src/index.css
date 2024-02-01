@@ -70,8 +70,8 @@ body {
 }
 
 .header {
-  padding-left: 92rem;
-  padding-right: 73rem;
+  padding-left: 60rem;
+  padding-right: 90rem;
   width: 100%;
   margin: 0;
   height: 118px;
@@ -124,23 +124,20 @@ body {
     }
 
     .downmenu {
-      transition-duration: 300ms;
       border-radius: 0px, 0px, 12px, 12px;
     }
 
     .downmenu-content {
       transition-duration: 300ms;
-      border-right: 1px solid rgb(40, 39, 39);
-      border-bottom: 1px solid rgb(40, 39, 39);
-      border-left: 1px solid rgb(40, 39, 39);
-      padding-top: 20px;
+      padding-top: 15px;
+      /* border: 1px solid rgb(40, 39, 39); */
       padding-bottom: 18px;
       text-align: center;
       display: none;
       position: absolute;
       background: #0B0B0F;
       min-width: 212px;
-      border-radius: 0px 0px 12px 12px;
+      border-radius: 12px;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
@@ -166,17 +163,15 @@ body {
     }
 
     .last-content {
-      border-right: 1px solid rgb(40, 39, 39);
-      border-bottom: 1px solid rgb(40, 39, 39);
-      border-left: 1px solid rgb(40, 39, 39);
-      padding-top: 20px;
+      /* border: 1px solid rgb(40, 39, 39); */
+      padding-top: 15px;
       padding-bottom: 18px;
       text-align: center;
       display: none;
       position: absolute;
       background: #0B0B0F;
       min-width: 212px;
-      border-radius: 0px 0px 12px 12px;
+      border-radius: 12px;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
@@ -589,11 +584,11 @@ body {
     }
 
     .nav-wallet {
-      display: none;
+      display: none !important;
     }
 
     .DaoLabslogo {
-      display: none;
+      display: none !important;
     }
   }
 }
