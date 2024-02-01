@@ -214,6 +214,7 @@
 
 @media screen and (max-width:430px) {
   .section1 {
+    overflow: hidden !important;
     padding-top: 38px;
     padding-right: 0;
     padding-bottom: 21.71px;
