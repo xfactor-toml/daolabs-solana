@@ -51,7 +51,7 @@
   .btns {
     width: 360px;
     margin-bottom: 264px;
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     align-items: center;
 
@@ -201,8 +201,8 @@
     .btns {
       width: 100%;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: center !important;
+      align-items: center !important;
       gap: 30px;
 
       .joinclub {
