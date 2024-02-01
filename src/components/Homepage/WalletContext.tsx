@@ -13,7 +13,7 @@ export const WalletButton: FC = () => {
 
   return (
     <WalletMultiButton>
-      {(screenSize.width <= 854) ? (connected ? <img src={Solana} alt="" /> : <img src={Solana} alt="" />) : (connected ? 'Connected' : 'Disconnected')}
+      {(screenSize.width <= 854) ? (connected ? <img src={Solana} alt="" /> : <img src={Solana} alt="" />) : (connected ? 'Disconnect' : 'Connect')}
     </WalletMultiButton>
   );
 }
