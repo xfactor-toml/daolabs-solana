@@ -1,12 +1,929 @@
-body {
-  background: #222222;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  font-size: calc(100vw/1440);
+  animation-duration: 0.1s;
+  transition-duration: 70ms;
+}
+
+/*------------------------- font style ------------------------- */
+h1 {
+  font-size: 64px;
+  font-weight: 900;
+  background-image: linear-gradient(228.49deg, #E4FD84 -6.9%, #EBAE79 98.89%);
+  background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 900;
+  background-image: linear-gradient(228.49deg, #E4FD84 -6.9%, #EBAE79 98.89%);
+  background-clip: text;
+  color: transparent;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 800;
+  background-image: linear-gradient(228.49deg, #E4FD84 -6.9%, #EBAE79 98.89%);
+  background-clip: text;
+  color: transparent;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 800;
+  background-image: linear-gradient(228.49deg, #E4FD84 -6.9%, #EBAE79 98.89%);
+  background-clip: text;
+  color: transparent;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 700;
+  background-image: linear-gradient(228.49deg, #E4FD84 -6.9%, #EBAE79 98.89%);
+  background-clip: text;
+  color: transparent;
+}
+
+body {
+  margin: 0 auto;
+  background: #222222;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: auto;
 }
+
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  padding-left: 92rem;
+  padding-right: 73rem;
+  width: 100%;
+  margin: 0;
+  height: 118px;
+  background-color: #0B0B0F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%) 1;
+
+
+  .DaoLabslogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-logo {
+    display: none;
+  }
+
+  .Menu {
+    display: flex;
+    gap: 32px;
+    list-style-type: none;
+
+    li {
+      border: none;
+      background: none;
+    }
+
+
+    .menu-title:hover {
+      border: none;
+      background: none;
+      text-shadow: 0px 1px 2px #ffffff, 0 0 5px #eaf9ab, 0 0 15px #edbd94;
+      transition-duration: 0.3s;
+    }
+
+    h5 {
+      font-size: 16px;
+      font-weight: 700;
+      background-image: linear-gradient(228.49deg, #E4FD84 -6.9%, #EBAE79 98.89%);
+      background-clip: text;
+      color: transparent;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .downmenu {
+      transition-duration: 300ms;
+      border-radius: 0px, 0px, 12px, 12px;
+    }
+
+    .downmenu-content {
+      transition-duration: 300ms;
+      border-right: 1px solid rgb(40, 39, 39);
+      border-bottom: 1px solid rgb(40, 39, 39);
+      border-left: 1px solid rgb(40, 39, 39);
+      padding-top: 20px;
+      padding-bottom: 18px;
+      text-align: center;
+      display: none;
+      position: absolute;
+      background: #0B0B0F;
+      min-width: 212px;
+      border-radius: 0px 0px 12px 12px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .downmenu-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition-duration: 300ms;
+    }
+
+    .downmenu-content a:hover {
+      border: none;
+      background: none;
+      text-shadow: 0px 1px 2px #FFFFFF80, 0 0 5px #ffffff23, 0 0 15px #ffffff65;
+      transition-duration: 0.1s;
+    }
+
+    .downmenu:hover .downmenu-content {
+      display: block;
+      transition-duration: 300ms;
+    }
+
+    .last-content {
+      border-right: 1px solid rgb(40, 39, 39);
+      border-bottom: 1px solid rgb(40, 39, 39);
+      border-left: 1px solid rgb(40, 39, 39);
+      padding-top: 20px;
+      padding-bottom: 18px;
+      text-align: center;
+      display: none;
+      position: absolute;
+      background: #0B0B0F;
+      min-width: 212px;
+      border-radius: 0px 0px 12px 12px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .last-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition-duration: 1s;
+      animation-duration: 1s;
+    }
+
+    .last-content a:hover {
+      border: none;
+      background: none;
+      text-shadow: 0px 1px 2px #FFFFFF80, 0 0 5px #ffffff23, 0 0 15px #ffffff65;
+      transition-duration: 0.1s;
+      animation-duration: 0.1s;
+    }
+
+    .downmenu:hover .last-content {
+      transition-duration: 300ms;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width:854px) {
+    .Menu {
+      .last-content {
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+
+
+  .daotokenlogo {
+    width: 80px;
+    height: 80px;
+    left: -35px;
+    top: -20px;
+    position: absolute;
+    z-index: 1;
+    visibility: visible !important;
+  }
+
+  .DAOxPrice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  @media screen and (max-width:1024px) {
+    .DAOxPrice {
+      display: none;
+    }
+  }
+
+  .tokenprice {
+    align-items: center;
+    appearance: none;
+    background-clip: padding-box;
+    background-color: initial;
+    background-image: none;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    padding-left: 47px;
+    padding-right: 15px;
+    display: flex;
+    flex-shrink: 0;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 24px;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    width: 120px;
+    height: 40px;
+    word-break: keep-all;
+    align-items: center;
+    z-index: 0;
+  }
+
+  .tokenprice:before,
+
+  .tokenprice:after {
+    border-radius: 10px;
+
+  }
+
+  .tokenprice:before {
+    background: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+  }
+
+  .tokenprice:after {
+    background-color: initial;
+    background: #1A1B23;
+    bottom: 1px;
+    content: "";
+    display: block;
+    left: 1px;
+    overflow: hidden;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    transition: all 100ms ease-out;
+    z-index: -1;
+  }
+
+  .nav-wallet-activebtn {
+    display: none;
+  }
+
+  .nav-wallet-disabledbtn {
+    display: none;
+  }
+
+  .nav-wallet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    .wallet-adapter-button-trigger {
+      background: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%);
+    }
+
+    .wallet-adapter-dropdown {
+      .wallet-adapter-button {
+        margin-left: 24px;
+        height: 40px;
+        color: black;
+        border-radius: 10px;
+        padding: 12px;
+      }
+
+      .wallet-adapter-modal-list {
+        .wallet-adapter-button {
+          margin-left: 0px;
+          color: white;
+        }
+      }
+
+      .wallet-adapter-button::after {
+        margin-left: 24px;
+        content: " ";
+        position: absolute;
+        inset: -.625px;
+        background: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%);
+        z-index: -1;
+        filter: blur(0);
+        border-radius: 10px;
+        transition: all;
+        transition-duration: 200ms;
+      }
+
+      .wallet-adapter-button:hover::after {
+        filter: blur(5.5px);
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width:854px) {
+  .header {
+    padding-left: 0;
+    padding-right: 15px;
+    justify-content: center;
+    background-color: #1A1B23;
+
+    .nav-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .nav-logo {
+        margin-right: -40px;
+        display: block;
+        width: 65px;
+        height: 45.7px;
+        z-index: 1;
+      }
+
+      .nav_menu {
+        width: 1200rem;
+        height: 60px;
+        padding-top: 23px;
+        padding-right: 23px;
+        padding-bottom: 23px;
+        padding-left: 23px;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 800;
+        appearance: none;
+        background-clip: padding-box;
+        background-color: initial;
+        background-image: none;
+        border-style: none;
+        box-sizing: border-box;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        font-family: Eina01, sans-serif;
+        justify-content: center;
+        line-height: 24px;
+        margin: 0;
+        outline: none;
+        overflow: visible;
+        pointer-events: auto;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+        word-break: keep-all;
+        z-index: 0;
+
+        .Menu {
+          width: 100%;
+          justify-content: center;
+          gap: 80rem;
+        }
+
+        h5 {
+          font-size: 12px;
+        }
+      }
+
+      .nav_menu:before,
+      .nav_menu:after {
+        border-radius: 48px;
+      }
+
+      .nav_menu:before {
+        background: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%);
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -2;
+      }
+
+      .nav_menu:after {
+        background-color: initial;
+        background: #0B0B0F;
+        bottom: 1px;
+        content: "";
+        display: block;
+        left: 1px;
+        overflow: hidden;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        transition: all 100ms ease-out;
+        z-index: -1;
+      }
+
+      .nav-wallet-disabledbtn {
+        width: 81px;
+        height: 81px;
+        border: none;
+        margin-left: -52px;
+        display: block;
+        cursor: pointer;
+        z-index: 1;
+
+        .wallet-adapter-button {
+          width: 44px !important;
+          height: 36px !important;
+          padding: 0;
+          position: absolute;
+          top: 22px;
+          left: 22px;
+          border-radius: 48px;
+          border: 1px solid transparent;
+          background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) padding-box,
+            linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%) border-box;
+
+          img {
+            position: absolute;
+            left: 14px;
+            mix-blend-mode: luminosity;
+          }
+
+          i {
+            img {
+              display: none;
+            }
+          }
+        }
+
+        .wallet-adapter-button::before {
+          background: url('./assets/logo/solanaLogo.svg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        .wallet-adapter-button::after {
+          margin-left: 0;
+          content: " ";
+          position: absolute;
+          inset: -.625px;
+          background: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%);
+          z-index: -1;
+          filter: blur(0);
+          border-radius: 48px;
+          transition: all;
+          transition-duration: 200ms;
+        }
+
+        .wallet-adapter-button:hover::after {
+          filter: blur(5.5px);
+        }
+
+
+
+      }
+
+      .nav-wallet-activebtn {
+        width: 81px;
+        height: 81px;
+        border: none;
+        margin-left: -52px;
+        display: block;
+        cursor: pointer;
+        z-index: 1;
+
+        .wallet-adapter-button {
+          margin-left: 0;
+          position: absolute;
+          top: 22px;
+          left: 22px;
+          padding: 0;
+          width: 44px !important;
+          height: 36px !important;
+          border-radius: 48px;
+          border: 1px solid transparent;
+          background: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%);
+
+          img {
+            position: absolute;
+            left: 14px;
+            mix-blend-mode: luminosity;
+          }
+
+          i {
+            img {
+              display: none;
+            }
+          }
+        }
+
+        .wallet-adapter-button::before {
+          background: url('./assets/logo/solanaLogo.svg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        .wallet-adapter-button::after {
+          content: " ";
+          position: absolute;
+          inset: -.625px;
+          background: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%);
+          z-index: -1;
+          filter: blur(0);
+          border-radius: 48px;
+          transition: all;
+          transition-duration: 200ms;
+        }
+
+        .wallet-adapter-button:hover::after {
+          filter: blur(5.5px);
+        }
+
+      }
+    }
+
+    .nav-wallet {
+      display: none;
+    }
+
+    .DaoLabslogo {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width:360px) {
+  .header {
+    .nav-menu {
+      .nav_menu {
+        .Menu {
+          gap: 8px !important;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin: 0;
+  padding-left: 101rem;
+  padding-top: 27px;
+  padding-bottom: 42px;
+  padding-right: 101rem;
+  background-color: #0B0B0F;
+  justify-content: space-between;
+  align-items: center;
+
+
+  .block1 {
+    width: 390px;
+    height: auto;
+    margin-left: 24px;
+    margin-top: 22px;
+    margin-bottom: 40px;
+    display: block;
+
+    .footerlogo {
+      margin-bottom: 30px;
+    }
+
+    h5 {
+      font-weight: 400;
+    }
+
+    .textarea {
+      margin-bottom: 32px;
+    }
+
+    .buildbtn {
+      align-items: center;
+      appearance: none;
+      background-clip: padding-box;
+      background-color: initial;
+      background-image: none;
+      border-style: none;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      flex-direction: row;
+      flex-shrink: 0;
+      font-family: Eina01, sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      justify-content: center;
+      line-height: 24px;
+      margin: 0;
+      min-height: 64px;
+      outline: none;
+      overflow: visible;
+      padding: 19px 26px;
+      pointer-events: auto;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      text-transform: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: middle;
+      width: 304px;
+      height: 56px;
+      word-break: keep-all;
+      z-index: 0;
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h5 {
+          background-image: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%);
+          background-clip: text;
+          color: transparent;
+        }
+
+        .arrowicon {
+          width: 14px;
+          height: 13px;
+        }
+      }
+    }
+
+    .buildbtn:before,
+    .buildbtn:after {
+      border-radius: 10px;
+    }
+
+    .buildbtn:before {
+      background: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%);
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -2;
+    }
+
+    .buildbtn:after {
+      background-color: initial;
+      background: #0B0B0F;
+      bottom: 1px;
+      content: "";
+      display: block;
+      left: 1px;
+      overflow: hidden;
+      position: absolute;
+      right: 1px;
+      top: 1px;
+      transition: all 100ms ease-out;
+      z-index: -1;
+    }
+
+    .buildbtn:hover:not(:disabled):after {
+      bottom: 3px;
+      left: 3px;
+      right: 3px;
+      top: 3px;
+      transition-timing-function: ease-in;
+      filter: blur(2.3px);
+      transition-duration: 100ms;
+    }
+
+    .buildbtn:active:not(:disabled) {
+      color: #ccc;
+    }
+
+    .buildbtn:active:not(:disabled):after {
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), #0B0B0F;
+      bottom: 1px;
+      left: 1px;
+      right: 1px;
+      top: 1px;
+    }
+
+    .buildbtn:disabled {
+      cursor: default;
+      opacity: .24;
+    }
+  }
+
+  .list {
+    display: flex;
+    justify-content: space-between;
+    gap: 23rem;
+
+    h5 {
+      font-size: 14px;
+      font-weight: 700;
+      background-image: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%);
+      background-clip: text;
+      color: transparent;
+    }
+
+    .website {
+      width: 208px;
+      height: 239px;
+      margin-top: 46px;
+      list-style-type: none;
+
+      li {
+        margin-bottom: 24px;
+        background-image: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%);
+        background-clip: text;
+        color: transparent;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+
+    .doresearch {
+      width: 208px;
+      height: 239px;
+      margin-top: 46px;
+      list-style-type: none;
+
+      li {
+        margin-bottom: 24px;
+        background-image: linear-gradient(228.49deg, #A2E6FB -6.9%, #F1C9DE 98.89%);
+        background-clip: text;
+        color: transparent;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+
+  }
+
+  .copyright {
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .leftside {
+      width: 80%;
+    }
+
+    .block1 {
+      width: 100%
+    }
+
+    .list {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width:507px) {
+  .footer {
+    .block1 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .list {
+      flex-direction: column;
+
+      .website {
+        width: 100%;
+      }
+
+      .doresearch {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:430px) {
+  .footer {
+    padding-top: 19px;
+    padding-right: 46px;
+    padding-bottom: 25px;
+    padding-left: 46px;
+    background: #1A1B23;
+
+    .leftside {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .block1 {
+        width: 274px;
+        margin-right: 5px;
+        margin-left: 5px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .footerlogo {
+          size: 100px, 100px;
+          margin-bottom: 20px;
+        }
+
+        .textarea {
+          padding-right: 15px;
+          width: 100%;
+
+          h5 {
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
+
+        .buildbtn {
+          width: 270px;
+          height: 56px;
+
+          h5 {
+            font-size: 14px;
+          }
+        }
+
+        .buildbtn:before,
+        .buildbtn:after {
+          border-radius: 24px;
+        }
+      }
+    }
+
+    .list {
+      display: none;
+    }
+  }
+}
+
+.staking,
+.daotools,
+.markets {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
